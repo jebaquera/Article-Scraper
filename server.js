@@ -27,18 +27,13 @@ app.use(express.json());
 // Make public a static folder
 app.use(express.static("public"));
 
-// const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/NewScrape";
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/NewsYouNeed";
 
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/unit18Populater", { useNewUrlParser: true });
-// mongoose.connect(MONGODB_URI);
-
+// mongoose.connect("mongodb://localhost/unit18Populater", { useNewUrlParser: true });
+mongoose.connect(MONGODB_URI);
 
 // Routes
-// app.get('/', function (req, res) {
-//   res.send('hello, world!')
-// });
-
 // A GET route for scraping the website
 app.get("/scrape", function(req, res) {
   // Make a request for bangordailynews.com
