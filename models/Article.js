@@ -6,22 +6,23 @@ var Schema = mongoose.Schema;
 // Using the Schema constructor, create a new LibrarySchema object
 // This is similar to a Sequelize model
 var ArticleSchema = new Schema({
-  // `title` and `link` are required and of type String
+  // `title` is required and of type String
   title: {
     type: String,
     required: true
   },
+    // `link` is required and of type String
   link: {
     type: String,
     required: true
   },
-  // details: {
-  //   type: String
-  // },
-  // saved: {
-  //   type: Boolean,
-  //   default: false
-  // },
+  details: {
+    type: String
+  },
+  saved: {
+    type: Boolean,
+    default: false
+  },
 
   // `note` is an object that stores a Note id
   // The ref property links the ObjectId to the Note model
