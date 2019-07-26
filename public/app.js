@@ -23,7 +23,7 @@ $(document).on("click", "p", function() {
     .then(function(data) {
       console.log(data);
       // The title of the article
-      $("#notes").append("<h2>" + data.title + "</h2>");
+      $("#notes").append("<h5>" + data.title + "</h5>");
       // An input to enter a new title
       $("#notes").append("<input id='titleinput' name='title' >");
       // A textarea to add a new note body
@@ -70,20 +70,8 @@ $(document).on("click", "#savenote", function () {
   $("#titleinput").val("");
   $("#bodyinput").val("");
 });
-//   }).done(function (data) {
-//     window.location = "/";
-//   });
-// });
 
-// $(document).on("click", "#clear", function (err, res) {
-//   $("#articles").empty();
-//   $.ajax({
-//     method: "GET",
-//     url: "/clear"
-//   }).done(function (data) {
-//     window.location.href = "/";
-//   });
-// });
+
 
 //When you click the home button
 // $(document).on("click", "#home", function () {

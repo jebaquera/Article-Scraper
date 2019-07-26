@@ -1,52 +1,130 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Scraping With Mongoose</title>
-    <style>
-      body { background-color: #F2F6D0 }
-      #wrapper {
-        width: 960px;
-        margin-left: auto;
-        margin-right: auto;
-        padding-top: 5%;
-      }
-      #articles {
-        display: inline-block;
-        overflow: auto;
-        width: 60%;
-        height: 700px;
-      }
-      #notes {
-        float: right;
-        width: 30%;
-      }
-      textarea, input {
-        display: block;
-        width: 100%;
-        background-color: #FCF5C7;
-      }
-      input {
-        height: 36px;
-        font-size: 24px;
-      }
-      textarea {
-        height: 200px;
-        font-size: 18px;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="wrapper">
-      <h1>Note Scraper</h1>
-      <a href="/scrape" id="btn-scrape">Scrape</a>
-      <a href="/articles" id="btn-articles">Articles</a>
 
-      <div id="articles"></div>
+<head>
+  <meta charset="UTF-8">
+  <title>News You Need</title>
+  <link rel="shortcut icon" type="image/ico" href="images/favicon.ico"/>
 
-      <div id="notes"></div>
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/jumbotron/">
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- Custom styles for this template -->
+  <link href="jumbotron.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: white;
+    }
+    .jumbotron {
+      /* background-color: rgb(216, 228, 171); */
+      background-image: url(/images/adrien-converse-yHAHGi4QOgM-unsplash.jpg);
+      color:white;
+    
+    }
+    .navbar {
+      color: white;
+      font-weight: 900;
+    }
+    .art-title {
+      font-weight: bold;
+
+    }
+    #wrapper {
+      width: 960px;
+      margin-left: 10%;
+      margin-right: auto;
+      padding-top: 5%;
+    }
+
+    #articles {
+      display: inline-block;
+      overflow: auto;
+      width: 90%;
+      height: 500px;
+    }
+
+    #notes {
+      float: right;
+      width: 30%;
+    }
+
+    textarea,
+    input {
+      display: block;
+      width: 100%;
+      background-color: aliceblue;
+      padding-top: 5%;
+    }
+
+    input {
+      height: 36px;
+      font-size: 18px;
+    }
+
+    textarea {
+      height: 200px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand">NYN Network</a>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <!-- <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li> -->
+        <li class="nav-item">
+          <a class="nav-link" href="/scrape" id="btn-scrape">Scrape</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/articles" id="btn-articles">Articles</a>
+        </li>
+      </ul>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="app.js"></script>
-  </body>
+  </nav>
+
+  <main role="main">
+    <div class="jumbotron">
+      <div class="container">
+        <h1 class="display-3">News You Need</h1>
+        <h2>The latest Bio news from your favorite source.</h2>
+        <p><a class="btn btn-primary btn-lg" href="/articles" role="button">View Articles &raquo;</a></p>
+      </div>
+    </div>
+
+    <div class="container" id="wrapper">
+      <div id="articles">
+      </div>
+      <div id="notes">
+      </div>
+      <hr>
+    </div>
+  </main>
+
+  <footer class="container">
+    <p>&copy; NYN Network 2019</p>
+  </footer>
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
 </html>

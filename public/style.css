@@ -8,6 +8,11 @@ body {
   min-height: 100vh;
 }
 
+title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 12em;
+}
 
 #articles {
   left: 5.8rem;
